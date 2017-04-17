@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Camera View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="CameraViewController" customModule="Smiling" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ls3-C4-SxW">
+                                <rect key="frame" x="0.0" y="82" width="375" height="480"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ix5-Rb-qFS">
+                                <rect key="frame" x="155" y="28" width="64" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="64" id="CoN-5N-f8G"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="SMILE">
+                                        <attributes>
+                                            <font key="NSFont" size="20" name="Avenir-Book"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z67-rr-XwP">
+                                <rect key="frame" x="57" y="588" width="63" height="71"/>
+                                <rect key="contentStretch" x="1" y="0.0" width="1" height="1"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="71" id="9NT-4M-4KI"/>
+                                    <constraint firstAttribute="width" constant="63" id="hOc-Z0-gs5"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="Camera"/>
+                                <connections>
+                                    <action selector="shootPhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RGU-cg-Rki"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H4U-Gy-c82">
+                                <rect key="frame" x="252" y="585" width="79" height="74"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="79" id="fzb-vf-D7c"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="Download"/>
+                                <connections>
+                                    <action selector="download:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tVC-Mn-OGd"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.75332818830000003" blue="0.63628626970000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="H4U-Gy-c82" secondAttribute="trailing" constant="28" id="11t-V9-AHh"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Z67-rr-XwP" secondAttribute="bottom" constant="8" symbolic="YES" id="6Db-D4-sqp"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="H4U-Gy-c82" secondAttribute="bottom" constant="8" symbolic="YES" id="7qz-Xb-Cyg"/>
+                            <constraint firstItem="ix5-Rb-qFS" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="9JD-fG-YEo"/>
+                            <constraint firstItem="ix5-Rb-qFS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Bsm-yB-Veb"/>
+                            <constraint firstItem="Z67-rr-XwP" firstAttribute="top" secondItem="Ls3-C4-SxW" secondAttribute="bottom" constant="26" id="Foy-bM-lF2"/>
+                            <constraint firstItem="Ls3-C4-SxW" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="62" id="PVH-zG-faz"/>
+                            <constraint firstItem="Z67-rr-XwP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="41" id="YGU-gI-ZuM"/>
+                            <constraint firstItem="Ls3-C4-SxW" firstAttribute="top" secondItem="ix5-Rb-qFS" secondAttribute="bottom" constant="33" id="c9a-fk-zHV"/>
+                            <constraint firstItem="ix5-Rb-qFS" firstAttribute="centerX" secondItem="Ls3-C4-SxW" secondAttribute="centerX" id="jOe-Bs-6Ad"/>
+                            <constraint firstItem="Ls3-C4-SxW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="rtN-PE-J6e"/>
+                            <constraint firstItem="H4U-Gy-c82" firstAttribute="top" secondItem="Ls3-C4-SxW" secondAttribute="bottom" constant="23" id="w8D-L6-cOe"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="myImageView" destination="Ls3-C4-SxW" id="gfG-MX-acM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Camera" width="256" height="256"/>
+        <image name="Download" width="256" height="256"/>
+    </resources>
+</document>
